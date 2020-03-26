@@ -32,6 +32,8 @@ This repository contains a sample app that implements MVVM architecture using Ko
 
 ### Looking for MVP Architecture - [Check here](https://github.com/MindorksOpenSource/android-mvp-architecture)
 
+### Learn to build a ride-sharing Android app like Uber, Lyft - [Check here](https://github.com/MindorksOpenSource/ridesharing-uber-lyft-app)
+
 [Check out MindOrks awesome open source projects here](https://mindorks.com/open-source-projects)
 
 ### License
