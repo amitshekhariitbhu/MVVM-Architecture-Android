@@ -15,7 +15,11 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
     private val users = MutableLiveData<Resource<List<User>>>()
     private val compositeDisposable = CompositeDisposable()
 
-    fun fetchUsers() {
+    init {
+        fetchUsers()
+    }
+
+    private fun fetchUsers() {
         users.postValue(Resource.loading(null))
         compositeDisposable.add(
             mainRepository.getUsers()

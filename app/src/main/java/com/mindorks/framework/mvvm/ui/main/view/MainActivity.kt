@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupUI()
         setupViewModel()
-        setupAPICall()
+        setupObserver()
     }
 
     private fun setupUI() {
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    private fun setupAPICall() {
+    private fun setupObserver() {
         mainViewModel.getUsers().observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        mainViewModel.fetchUsers()
     }
 
     private fun renderList(users: List<User>) {
