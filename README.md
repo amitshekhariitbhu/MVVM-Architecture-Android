@@ -36,13 +36,13 @@ This repository contains a sample app that implements MVVM architecture using Ko
 
 [Check out MindOrks awesome open source projects here](https://mindorks.com/open-source-projects)
 
-# MVP template
+# MVVM template
 
 When we follow any architecture pattern like MVP, MVVM, MVP clean, we always come across a small but repetitive task to create basic files like Android Activity, Presenter, View, Api models and then writing boiler plate code. This usually takes 1-2 hours for each single screen. To ease out work and save time We have created an automated template which will do above work in less than 20 seconds.
 
 ### How to Install
 
-Find the template/MVPActivity folder under root directory of android-mvp-architecture app. Paste the MVPActivity folder at below location.
+Find the template/MVVMActivity folder under root directory of android-mvvm-architecture app. Paste the MVVMActivity folder at below location.
 1. Windows - C:\Program Files\Android\Android Studio\plugins\android\lib\templates\activities
 2. Mac - /Applications/Android/Studio.app/Contents/plugins/android/lib/templates/activities
 
@@ -53,9 +53,9 @@ Restart the Android Studio.
 
 ### How to use
 
-Select the folder under which you want to create a new MVP folder. This MVP folder will contain Activity, Presenter, MVpPresenter and View class. For example, to create a new MVP folder under “view” folder, do as shown below.
+Select the folder under which you want to create a new MVV folder. This MVVM folder will contain Activity, ViewModel. For example, to create a new MVVM folder under “ui” folder, do as shown below.
 
-![Blueprint](https://github.com/sachinrana135/MVVM-Architecture-Android-Beginners/blob/feature/mvp_template/template/How_to_use_template.gif)
+![Blueprint](https://github.com/sachinrana135/MVVM-Architecture-Android-Beginners/blob/feature/mvvm_template/template/How_to_use_template.gif)
 <br>
 
 ### License
