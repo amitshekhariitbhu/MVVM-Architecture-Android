@@ -17,10 +17,13 @@ This repository contains a sample app that implements MVVM architecture using Ko
 
 ## [My Personal Blog - amitshekhar.me](https://amitshekhar.me/blog) - High-quality content to learn Android concepts.
 
-#### The app has following packages:
+### The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 3. **ui**: View classes along with their corresponding ViewModel.
 4. **utils**: Utility classes.
+
+### Resource to learn MVVM Architecture
+- [MVVM Architecture - Android Tutorial for Beginners](https://amitshekhar.me/blog/mvvm-architecture-android)
 
 ### Library reference resources:
 1. RxJava2: https://github.com/amitshekhariitbhu/RxJava2-Android-Samples
