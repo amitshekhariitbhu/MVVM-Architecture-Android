@@ -21,7 +21,7 @@ import javax.inject.Inject
 class TopHeadlineActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var newsListViewModel: TopHeadlineViewModel
+    lateinit var topHeadlineViewModel: TopHeadlineViewModel
 
     @Inject
     lateinit var adapter: TopHeadlineAdapter
@@ -52,11 +52,11 @@ class TopHeadlineActivity : AppCompatActivity() {
     private fun setupObserver() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                newsListViewModel.articleList.collect {
+                topHeadlineViewModel.articleList.collect {
                     when (it.status) {
                         Status.SUCCESS -> {
                             binding.progressBar.visibility = View.GONE
-                            it.data?.let { newsList -> renderList(newsList) }
+                            it.data?.let { articleList -> renderList(articleList) }
                             binding.recyclerView.visibility = View.VISIBLE
                         }
                         Status.LOADING -> {

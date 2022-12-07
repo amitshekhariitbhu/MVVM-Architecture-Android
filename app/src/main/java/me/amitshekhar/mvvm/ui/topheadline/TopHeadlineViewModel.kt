@@ -18,10 +18,10 @@ class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineReposit
     val articleList: StateFlow<Resource<List<Article>>> = _articleList
 
     init {
-        fetchNews()
+        fetchTopHeadlines()
     }
 
-    private fun fetchNews() {
+    private fun fetchTopHeadlines() {
         viewModelScope.launch {
             topHeadlineRepository.getTopHeadlines(COUNTRY)
                 .catch { e ->
