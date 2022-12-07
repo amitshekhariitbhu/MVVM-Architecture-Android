@@ -1,33 +1,47 @@
 # MVVM Architecture Android Beginners: Sample App
 
-This repository contains a sample app that implements MVVM architecture using Kotlin, ViewModel, LiveData, and etc.
+This repository contains a sample app that implements MVVM architecture using Kotlin, Dagger,
+Retrofit, Coroutines, Flow, StateFlow, and etc.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android-Beginners/master/assets/banner-mvvm-arch-beginners.jpg">
+  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android/master/assets/banner-mvvm-arch-beginners.jpg">
 </p>
 <br>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android-Beginners/master/assets/mvvm-arch.png">
+  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android/master/assets/mvvm-arch.png">
 </p>
 <br>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android-Beginners/master/assets/project-structure-mvvm.png">
+  <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android/master/assets/project-structure-mvvm.png">
 </p>
 <br>
 <br>
 
 ## [My Personal Blog - amitshekhar.me](https://amitshekhar.me/blog) - High-quality content to learn Android concepts.
 
+### Major Highlights
+
+- MVVM Architecture
+- Kotlin
+- Dagger
+- Retrofit
+- Coroutines
+- Flow
+- StateFlow
+
 ### The app has following packages:
-1. **data**: It contains all the data accessing and manipulating components.
-3. **ui**: View classes along with their corresponding ViewModel.
-4. **utils**: Utility classes.
 
-### Resource to learn MVVM Architecture
-- [MVVM Architecture - Android Tutorial for Beginners](https://amitshekhar.me/blog/mvvm-architecture-android)
+- **data**: It contains all the data accessing and manipulating components.
+- **di**: It contains all the dependency injection related classes and interfaces.
+- **ui**: View classes along with their corresponding ViewModel.
+- **utils**: Utility classes.
 
-### Library reference resources:
-1. RxJava2: https://github.com/amitshekhariitbhu/RxJava2-Android-Samples
-2. Fast-Android-Networking: https://github.com/amitshekhariitbhu/Fast-Android-Networking
+### Resources to learn MVVM Architecture and other components used in this project:
+
+- MVVM
+  Architecture: [MVVM Architecture - Android Tutorial](https://amitshekhar.me/blog/mvvm-architecture-android)
+- Mastering Kotlin
+  Coroutines: [Mastering Kotlin Coroutines](https://amitshekhar.me/blog/kotlin-coroutines)
+- Flow API in Kotlin: [Flow API in Kotlin](https://amitshekhar.me/blog/flow-api-in-kotlin)
 
 You can connect with me on:
 
@@ -39,6 +53,7 @@ You can connect with me on:
 [**Read all of my blogs here.**](https://amitshekhar.me/blog)
 
 ### License
+
 ```
    Copyright (C) 2022 Amit Shekhar
 
@@ -56,4 +71,5 @@ You can connect with me on:
 ```
 
 ### Contributing to Android MVVM Architecture
+
 Just make pull request. You are in!
