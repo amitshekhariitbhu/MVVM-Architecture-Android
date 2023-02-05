@@ -15,7 +15,7 @@ import me.amitshekhar.mvvm.data.model.Article
 import me.amitshekhar.mvvm.databinding.ActivityTopHeadlineBinding
 import me.amitshekhar.mvvm.di.component.DaggerActivityComponent
 import me.amitshekhar.mvvm.di.module.ActivityModule
-import me.amitshekhar.mvvm.utils.Status
+import me.amitshekhar.mvvm.ui.base.UiState
 import javax.inject.Inject
 
 class TopHeadlineActivity : AppCompatActivity() {
@@ -53,17 +53,17 @@ class TopHeadlineActivity : AppCompatActivity() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 topHeadlineViewModel.articleList.collect {
-                    when (it.status) {
-                        Status.SUCCESS -> {
+                    when (it) {
+                        is UiState.Success -> {
                             binding.progressBar.visibility = View.GONE
-                            it.data?.let { articleList -> renderList(articleList) }
+                            renderList(it.data)
                             binding.recyclerView.visibility = View.VISIBLE
                         }
-                        Status.LOADING -> {
+                        is UiState.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
                             binding.recyclerView.visibility = View.GONE
                         }
-                        Status.ERROR -> {
+                        is UiState.Error -> {
                             //Handle Error
                             binding.progressBar.visibility = View.GONE
                             Toast.makeText(this@TopHeadlineActivity, it.message, Toast.LENGTH_LONG)
@@ -81,12 +81,9 @@ class TopHeadlineActivity : AppCompatActivity() {
     }
 
     private fun injectDependencies() {
-        DaggerActivityComponent
-            .builder()
+        DaggerActivityComponent.builder()
             .applicationComponent((application as MVVMApplication).applicationComponent)
-            .activityModule(ActivityModule(this))
-            .build()
-            .inject(this)
+            .activityModule(ActivityModule(this)).build().inject(this)
     }
 
 }

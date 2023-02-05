@@ -8,14 +8,14 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 import me.amitshekhar.mvvm.data.model.Article
 import me.amitshekhar.mvvm.data.repository.TopHeadlineRepository
+import me.amitshekhar.mvvm.ui.base.UiState
 import me.amitshekhar.mvvm.utils.AppConstant.COUNTRY
-import me.amitshekhar.mvvm.utils.Resource
 
 class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineRepository) : ViewModel() {
 
-    private val _articleList = MutableStateFlow<Resource<List<Article>>>(Resource.loading())
+    private val _articleList = MutableStateFlow<UiState<List<Article>>>(UiState.Loading)
 
-    val articleList: StateFlow<Resource<List<Article>>> = _articleList
+    val articleList: StateFlow<UiState<List<Article>>> = _articleList
 
     init {
         fetchTopHeadlines()
@@ -25,10 +25,10 @@ class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineReposit
         viewModelScope.launch {
             topHeadlineRepository.getTopHeadlines(COUNTRY)
                 .catch { e ->
-                    _articleList.value = Resource.error(e.toString())
+                    _articleList.value = UiState.Error(e.toString())
                 }
                 .collect {
-                    _articleList.value = Resource.success(it)
+                    _articleList.value = UiState.Success(it)
                 }
         }
     }
