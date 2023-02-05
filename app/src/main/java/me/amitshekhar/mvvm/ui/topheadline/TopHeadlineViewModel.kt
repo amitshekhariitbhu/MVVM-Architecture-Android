@@ -13,9 +13,9 @@ import me.amitshekhar.mvvm.utils.AppConstant.COUNTRY
 
 class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineRepository) : ViewModel() {
 
-    private val _articleList = MutableStateFlow<UiState<List<Article>>>(UiState.Loading)
+    private val _uiState = MutableStateFlow<UiState<List<Article>>>(UiState.Loading)
 
-    val articleList: StateFlow<UiState<List<Article>>> = _articleList
+    val uiState: StateFlow<UiState<List<Article>>> = _uiState
 
     init {
         fetchTopHeadlines()
@@ -25,10 +25,10 @@ class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineReposit
         viewModelScope.launch {
             topHeadlineRepository.getTopHeadlines(COUNTRY)
                 .catch { e ->
-                    _articleList.value = UiState.Error(e.toString())
+                    _uiState.value = UiState.Error(e.toString())
                 }
                 .collect {
-                    _articleList.value = UiState.Success(it)
+                    _uiState.value = UiState.Success(it)
                 }
         }
     }
