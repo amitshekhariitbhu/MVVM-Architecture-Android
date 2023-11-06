@@ -1,35 +1,37 @@
 package me.amitshekhar.mvvm.ui.topheadline
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import me.amitshekhar.mvvm.MVVMApplication
 import me.amitshekhar.mvvm.data.model.Article
 import me.amitshekhar.mvvm.databinding.ActivityTopHeadlineBinding
-import me.amitshekhar.mvvm.di.component.DaggerActivityComponent
-import me.amitshekhar.mvvm.di.module.ActivityModule
 import me.amitshekhar.mvvm.ui.base.UiState
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class TopHeadlineActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var topHeadlineViewModel: TopHeadlineViewModel
+    private lateinit var binding: ActivityTopHeadlineBinding
+
+    /*@Inject
+    lateinit var topHeadlineViewModel: TopHeadlineViewModel*/
+    private val topHeadlineViewModel: TopHeadlineViewModel by viewModels()
 
     @Inject
     lateinit var adapter: TopHeadlineAdapter
 
-    private lateinit var binding: ActivityTopHeadlineBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        injectDependencies()
+       // injectDependencies()
         super.onCreate(savedInstanceState)
         binding = ActivityTopHeadlineBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -59,10 +61,12 @@ class TopHeadlineActivity : AppCompatActivity() {
                             renderList(it.data)
                             binding.recyclerView.visibility = View.VISIBLE
                         }
+
                         is UiState.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
                             binding.recyclerView.visibility = View.GONE
                         }
+
                         is UiState.Error -> {
                             //Handle Error
                             binding.progressBar.visibility = View.GONE
@@ -75,15 +79,16 @@ class TopHeadlineActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun renderList(articleList: List<Article>) {
         adapter.addData(articleList)
         adapter.notifyDataSetChanged()
     }
 
-    private fun injectDependencies() {
+    /*private fun injectDependencies() {
         DaggerActivityComponent.builder()
             .applicationComponent((application as MVVMApplication).applicationComponent)
             .activityModule(ActivityModule(this)).build().inject(this)
-    }
+    }*/
 
 }

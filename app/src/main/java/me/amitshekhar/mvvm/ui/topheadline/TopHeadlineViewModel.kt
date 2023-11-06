@@ -2,6 +2,7 @@ package me.amitshekhar.mvvm.ui.topheadline
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
@@ -10,8 +11,10 @@ import me.amitshekhar.mvvm.data.model.Article
 import me.amitshekhar.mvvm.data.repository.TopHeadlineRepository
 import me.amitshekhar.mvvm.ui.base.UiState
 import me.amitshekhar.mvvm.utils.AppConstant.COUNTRY
+import javax.inject.Inject
 
-class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineRepository) : ViewModel() {
+@HiltViewModel
+class TopHeadlineViewModel @Inject constructor(private val topHeadlineRepository: TopHeadlineRepository) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState<List<Article>>>(UiState.Loading)
 
