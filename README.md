@@ -1,7 +1,10 @@
 # MVVM Architecture Android Beginners: Sample App
 
-This repository contains a sample app that implements MVVM architecture using Kotlin, Dagger,
-Retrofit, Coroutines, Flow, StateFlow, and etc.
+This repository contains a sample app that implements MVVM architecture using Kotlin,
+Retrofit, Coroutines, Flow, StateFlow, Hilt and etc.
+
+I've updated this project to latest version and add replace Dagger2 with Hilt the latest updated version of Dagger2
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/amitshekhariitbhu/MVVM-Architecture-Android/master/assets/banner-mvvm-arch-beginners.jpg">
 </p>
