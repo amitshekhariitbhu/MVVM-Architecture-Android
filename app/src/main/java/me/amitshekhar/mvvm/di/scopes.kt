@@ -3,5 +3,5 @@ package me.amitshekhar.mvvm.di
 import javax.inject.Scope
 
 @Scope
-@Retention(AnnotationRetention.SOURCE)
+@Retention(AnnotationRetention.BINARY)
 annotation class ActivityScope
