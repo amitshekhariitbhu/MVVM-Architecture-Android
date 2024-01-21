@@ -5,12 +5,27 @@
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
+        <item name="android:fontFamily">@font/quicksand_bold</item>
+        <item name="icon">@mipmap/ic_launcher</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/black_</item>
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
     </style>
+
+    <!--    Dark Mode -->
+    <!--    Screen Background -->
+    <style name="SCREEN">
+        <item name="android:background">@color/black_</item>
+    </style>
+
+    <!--    Text background is Dark Mode -->
+    <style name="TEXT">
+        <item name="android:textColor">@color/white_</item>
+    </style>
+
 </resources>
