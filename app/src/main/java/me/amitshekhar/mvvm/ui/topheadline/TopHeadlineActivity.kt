@@ -32,7 +32,6 @@ class TopHeadlineActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopHeadlineBinding
 
-    private var doubleBackToExitPressedOnce = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,22 +112,6 @@ class TopHeadlineActivity : AppCompatActivity() {
         DaggerActivityComponent.builder()
             .applicationComponent((application as MVVMApplication).applicationComponent)
             .activityModule(ActivityModule(this)).build().inject(this)
-    }
-
-
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed()
-            return
-        }
-        this.doubleBackToExitPressedOnce = true
-
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
-
-        Handler(Looper.getMainLooper()).postDelayed(Runnable {
-            doubleBackToExitPressedOnce = false
-        }, 2000)
     }
 
 
