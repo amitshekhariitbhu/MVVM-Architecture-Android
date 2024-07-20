@@ -16,7 +16,7 @@ Retrofit, Coroutines, Flow, StateFlow, and etc.
 <br>
 <br>
 
-## [My Personal Blog - amitshekhar.me](https://amitshekhar.me/blog) - High-quality content to learn Android concepts.
+## [Outcome School Blog](https://outcomeschool.com/blog) - High-quality content to learn Android concepts.
 
 ### Major Highlights
 
@@ -38,7 +38,7 @@ Retrofit, Coroutines, Flow, StateFlow, and etc.
 ### Resources to learn MVVM Architecture and other components used in this project:
 
 - MVVM
-  Architecture: [MVVM Architecture - Android Tutorial](https://amitshekhar.me/blog/mvvm-architecture-android)
+  Architecture: [MVVM Architecture - Android Tutorial](https://outcomeschool.com/blog/mvvm-architecture-android)
     - We will cover the following in this tutorial:
         - What is MVVM architecture?
         - Set up a new project with Kotlin and other dependencies required.
@@ -49,9 +49,9 @@ Retrofit, Coroutines, Flow, StateFlow, and etc.
         - Set up UI layer, build and run the project.
         - Project Source Code and What Next?
 - Mastering Kotlin
-  Coroutines: [Mastering Kotlin Coroutines](https://amitshekhar.me/blog/kotlin-coroutines)
-- Flow API in Kotlin: [Flow API in Kotlin](https://amitshekhar.me/blog/flow-api-in-kotlin)
-- Learn Kotlin Topics: [Kotlin Blog](https://amitshekhar.me/tags/kotlin)
+  Coroutines: [Mastering Kotlin Coroutines](https://outcomeschool.com/blog/kotlin-coroutines)
+- Flow API in Kotlin: [Flow API in Kotlin](https://outcomeschool.com/blog/flow-api-in-kotlin)
+- Learn Kotlin Topics: [Kotlin Blog](https://outcomeschool.com/tags/kotlin)
 
 You can connect with me on:
 
@@ -60,12 +60,12 @@ You can connect with me on:
 - [GitHub](https://github.com/amitshekhariitbhu)
 - [Facebook](https://www.facebook.com/amit.shekhar.iitbhu)
 
-[**Read all of my blogs here.**](https://amitshekhar.me/blog)
+[**Read all of our blogs here.**](https://outcomeschool.com/blog)
 
 ### License
 
 ```
-   Copyright (C) 2022 Amit Shekhar
+   Copyright (C) 2024 Amit Shekhar
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
