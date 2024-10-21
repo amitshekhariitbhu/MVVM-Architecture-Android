@@ -25,7 +25,7 @@ I've updated this project to latest version and add replace Dagger2 with Hilt th
 
 - MVVM Architecture
 - Kotlin
-- Dagger
+- Hilt (Updated from Dagger2 to Hilt form main soruce)
 - Retrofit
 - Coroutines
 - Flow
