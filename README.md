@@ -65,7 +65,7 @@ You can connect with me on:
 ### License
 
 ```
-   Copyright (C) 2024 Amit Shekhar
+   Copyright (C) 2025 Amit Shekhar
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

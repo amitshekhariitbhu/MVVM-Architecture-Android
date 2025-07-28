@@ -1,0 +1,43 @@
+[versions]
+agp = "8.11.1"
+kotlin = "2.0.21"
+devtoolsKsp = "2.0.21-1.0.27"
+coreKtx = "1.16.0"
+appcompat = "1.7.1"
+material = "1.12.0"
+constraintlayout = "2.2.1"
+recyclerview = "1.4.0"
+glide = "4.16.0"
+retrofit = "3.0.0"
+lifecycleExtensions = "1.1.1"
+lifecycleViewmodelKtx = "2.9.2"
+lifecycleRuntimeKtx = "2.9.2"
+dagger = "2.57"
+browser = "1.8.0"
+junit = "4.13.2"
+junitTestExt = "1.2.1"
+espressoCore = "3.6.1"
+
+[libraries]
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+lifecycle-extensions = { module = "android.arch.lifecycle:extensions", version.ref = "lifecycleExtensions" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+browser = { module = "androidx.browser:browser", version.ref = "browser" }
+junit = { module = "junit:junit", version.ref = "junit" }
+junit-test-ext = { module = "androidx.test.ext:junit", version.ref = "junitTestExt" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtoolsKsp" }
