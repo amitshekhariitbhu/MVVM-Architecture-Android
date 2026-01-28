@@ -53,12 +53,29 @@ Retrofit, Coroutines, Flow, StateFlow, and etc.
 - Flow API in Kotlin: [Flow API in Kotlin](https://outcomeschool.com/blog/flow-api-in-kotlin)
 - Learn Kotlin Topics: [Kotlin Blog](https://outcomeschool.com/tags/kotlin)
 
-You can connect with me on:
+## About me
 
-- [Twitter](https://twitter.com/amitiitbhu)
+Hi, I am Amit Shekhar, Founder @ [Outcome School](https://outcomeschool.com) • IIT 2010-14 • I have taught and mentored many developers, and their efforts landed them high-paying tech jobs, helped many tech companies in solving their unique problems, and created many open-source libraries being used by top companies. I am passionate about sharing knowledge through open-source, blogs, and videos.
+
+### Follow Amit Shekhar
+
+- [X/Twitter](https://twitter.com/amitiitbhu)
 - [LinkedIn](https://www.linkedin.com/in/amit-shekhar-iitbhu)
 - [GitHub](https://github.com/amitshekhariitbhu)
-- [Facebook](https://www.facebook.com/amit.shekhar.iitbhu)
+
+### Follow Outcome School
+
+- [YouTube](https://youtube.com/@OutcomeSchool)
+- [X/Twitter](https://x.com/outcome_school)
+- [LinkedIn](https://www.linkedin.com/company/outcomeschool)
+- [GitHub](http://github.com/OutcomeSchool)
+
+## I teach at Outcome School
+
+- AI and Machine Learning
+- Android
+
+Join Outcome School and get a high-paying tech job: [Outcome School](https://outcomeschool.com)
 
 [**Read all of our blogs here.**](https://outcomeschool.com/blog)
 
